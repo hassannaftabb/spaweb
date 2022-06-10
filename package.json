@@ -4,10 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "postbuild": "next-sitemap"
+    "build": "next build"
   },
   "dependencies": {
+    "@next/env": "^12.1.6",
     "dotenv": "^8.2.0",
     "framer-motion": "^2.7.5",
     "globby": "^11.0.0",
