@@ -10,23 +10,23 @@ import ArrowEven from 'assets/arrowEven.svg';
 const data = [
   {
     id: 1,
-    title: 'Planning & Development',
-    text: 'Here the data is fetched, organized & development plan is made. Further the powerful development is done according to the set of rules!',
+    title: 'Apply for KYC',
+    text: 'Start by applying for Know Your Customer (KYC) verification through our user-friendly platform. Fill out the necessary information and provide any required documentation to kickstart the process.',
   },
   {
     id: 2,
-    title: 'Software Quality Assurance/API QA',
-    text: 'Quality is my priority, thats why, QA is done under usage of innovative testing tools.',
+    title: 'Pay the Fee',
+    text: "Once your application is submitted, you'll be prompted to pay the applicable fee based on your chosen verification plan (Normal, Fast, or Priority). We accept SOL as payment for our services.",
   },
   {
     id: 3,
-    title: 'Hosting & Domains',
-    text: 'Great Hosting brings great traffic, here I choose the best hosting services for your ideas, so that it boosts your business!',
+    title: 'Verification Process',
+    text: 'Your application will undergo a comprehensive verification process conducted by our trusted third-party KYC provider. Rest assured, our verification process complies with GDPR and EU laws, ensuring the highest standards of data protection and privacy.',
   },
   {
     id: 4,
-    title: 'Final QA',
-    text: 'This brings us to the final testing, here I test the web application thoroughly & manually for best quality delivery.',
+    title: '5-Minute Call',
+    text: "Following the third-party verification, you'll have a brief 5-minute call with our SolanaKYC team. This call serves as an additional layer of verification and allows us to confirm your identity.  After this final step we'll publish your KYC document and badge.",
   },
 ];
 
@@ -35,14 +35,20 @@ export default function WorkFlow() {
     <section sx={styles.workflow}>
       <Container>
         <SectionHeader
-          slogan="Whats the function"
+          // slogan="Whats the function"
           title="Let’s see how it works"
           isWhite={true}
         />
 
         <Grid sx={styles.grid}>
-          {data.map((item) => (
-            <Box sx={styles.card} key={item.id}>
+          {data.map((item, i) => (
+            <Box
+              sx={styles.card}
+              key={item.id}
+              data-aos="fade-right"
+              data-aos-duration="2000"
+              data-aos-delay={`${i + 5}00`}
+            >
               <Box sx={styles.iconBox}>{`0${item.id}`}</Box>
               <Box sx={styles.wrapper}>
                 <Heading sx={styles.wrapper.title}>{item.title}</Heading>
@@ -58,7 +64,7 @@ export default function WorkFlow() {
 
 const styles = {
   workflow: {
-    backgroundColor: 'grey',
+    backgroundColor: '#DC1FFF',
     backgroundImage: `url(${PatternBG})`,
     backgroundRepeat: `no-repeat`,
     backgroundPosition: 'center center',

@@ -6,10 +6,11 @@ import FeatureThumb from 'assets/core-feature.png';
 import shapePattern from 'assets/shape-pattern2.png';
 
 const data = {
-  subTitle: 'Core features',
-  title: 'Various types dynamic Website Development for you!',
-  btnName: 'Get A Web!',
-  btnURL: '#pricing',
+  subTitle:
+    "Transparency and trust aren't just ideals; they're the foundation of everything we do. As experts in identity verification, our commitment to the Solana ecosystem's integrity is unwavering. Here's an insight into our process",
+  title: 'How?',
+  // btnName: 'Get A Web!',
+  // btnURL: '#pricing',
 };
 
 export default function CoreFeature() {

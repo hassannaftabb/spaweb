@@ -117,7 +117,7 @@ const styles = {
       mb: [0, null, -6, null, null, '-40px', null, -3],
       img: {
         position: 'relative',
-        height: [245, 'auto'],
+        height: [150, 'auto'],
       },
     },
   },

@@ -24,7 +24,9 @@ export default function PriceCard({
           <Heading className="package__name" variant="title">
             {name}
           </Heading>
-          <Text as="p">{description}</Text>
+          <Text as="p" style={{ fontSize: 15 }}>
+            {description}
+          </Text>
         </Box>
         <List items={points} childStyle={styles.listItem} />
         <Text className="package__price" sx={styles.price}>
@@ -53,7 +55,7 @@ const styles = {
       top: 0,
       left: 0,
       height: '100%',
-      border: '1px solid rgba(38, 78, 118, 0.1)',
+      border: '1px solid rgba(38, 78, 118, 0.7)',
       borderRadius: 'inherit',
       transition: 'all 0.3s',
       zIndex: -1,

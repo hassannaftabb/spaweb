@@ -12,10 +12,10 @@ const packages = {
   monthly: [
     {
       id: 1,
-      name: 'StartUp',
-      description: 'For Small businesses or organizations',
-      buttonText: 'Get a StartUp!',
-      priceWithUnit: '$30',
+      name: 'Normal',
+      description: 'KYC one or two team members (owner + 1)',
+      buttonText: '1.5 SOLANA',
+      priceWithUnit: '1.5 SOLANA',
       points: [
         {
           id: 1,
@@ -45,9 +45,9 @@ const packages = {
     },
     {
       id: 2,
-      name: 'Business king',
-      description: 'For Prevailing business',
-      priceWithUnit: '$50',
+      name: 'Fast',
+      description: 'KYC one or two team members (owner + 1)',
+      priceWithUnit: '3 SOLANA',
       buttonText: 'Get a Business King Web!',
       anotherOption: 'Or Contact for Custom Offer!',
       points: [
@@ -87,9 +87,9 @@ const packages = {
       id: 3,
       header: 'Suggested',
       headerIcon: <IoIosCheckmarkCircle />,
-      name: 'Pro Master',
-      description: 'For professional Businesses',
-      priceWithUnit: '$100',
+      name: 'Priority',
+      description: 'KYC one or two team members (owner + 1)',
+      priceWithUnit: '5 SOLANA',
       buttonText: 'Get a Professional Web!',
       anotherOption: 'Or Contact with me for cutsom offers!',
       points: [
@@ -150,7 +150,7 @@ export default function Package() {
   const sliderParams = {
     additionalTransfrom: 0,
     arrows: false,
-    autoPlaySpeed: 3000,
+    autoPlaySpeed: 1000,
     centerMode: false,
     className: '',
     slidesToSlide: 1,
@@ -174,10 +174,10 @@ export default function Package() {
     <section id="pricing" sx={{ variant: 'section.pricing' }}>
       <Container>
         <SectionHeader
-          slogan="Pricing Plan"
-          title="Choose your pricing policy"
+          slogan="Choose the plan that best fits your project's timeline and requirements:"
+          title="Pricing"
         />
-        <Flex sx={styles.buttonGroup}>
+        {/* <Flex sx={styles.buttonGroup}>
           <Box sx={styles.buttonGroupInner}>
             <button
               className={state.active === 'monthly' ? 'active' : ''}
@@ -187,7 +187,7 @@ export default function Package() {
               Decide a Plan & contact me from my About Section Links!
             </button>
           </Box>
-        </Flex>
+        </Flex> */}
         <Box sx={styles.pricingWrapper} className="pricing__wrapper">
           <Carousel {...sliderParams}>
             {state.pricingPlan.map((packageData) => (
