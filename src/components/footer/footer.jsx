@@ -9,7 +9,7 @@ export default function Footer() {
       <Box sx={styles.footer.footerBottomArea} className="fba">
         <div style={styles.left}>
           <Logo />
-          <p>
+          <p style={styles.left.p}>
             Disclaimer: SolanaKYC is an independent community project focused on
             bringing fairness and transparency to the Solana ecosystem. We are
             not affiliated with the Solana brand, and the Solana name and logo
@@ -60,6 +60,10 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
+    p: {
+      fontWeight: 'bold',
+      fontSize: '18px',
+    },
   },
   right: {
     display: 'flex',
@@ -69,6 +73,7 @@ const styles = {
     a: {
       color: '#fff',
       textDecoration: 'none',
+      fontSize: '18px',
     },
   },
   footer: {
