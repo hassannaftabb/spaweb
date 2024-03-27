@@ -1,33 +1,63 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { Container, Box, Heading, Text, Image, Button } from 'theme-ui';
-import BannerImg from 'assets/banner-thumb.png';
+import BannerImg from 'assets/logo.webp';
 import ShapeLeft from 'assets/shape-left.png';
 import ShapeRight from 'assets/shape-right.png';
 import Link from 'react-scroll';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import gsap from 'gsap';
+import { useEffect } from 'react';
 
 export default function Banner() {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    let panels = gsap.utils.toArray('.panel-banner');
+
+    panels.forEach((panel, i) => {
+      ScrollTrigger.create({
+        trigger: panel,
+        start: () =>
+          panel.offsetHeight < window.innerHeight ? 'top top' : 'bottom bottom',
+        pin: true,
+        pinSpacing: false,
+      });
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
   return (
-    <section sx={styles.banner} id="home">
+    <section sx={styles.banner} id="home" className="panel-banner">
       <Container sx={styles.banner.container}>
-        <Box sx={styles.banner.contentBox}>
+        <Box
+          sx={styles.banner.contentBox}
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
           <Heading as="h1" variant="heroPrimary">
-            Demo NEXT.js Single Page Application Portfolio!
+            SolanaKYC
           </Heading>
           <Text as="p" variant="heroSecondary">
-            Looking for a portfolio website for your company that best
-            represents your business? Checkout out this.
+            The Trusted Identity Verification Partner for Solana Projects
           </Text>
           <Button variant="primary">
             <a
               href="#pricing"
               style={{ textDecoration: 'none', color: 'black' }}
             >
-              Get One!
+              Apply Now
             </a>
           </Button>
         </Box>
-        <Box sx={styles.banner.imageBox}>
+        <Box
+          sx={styles.banner.imageBox}
+          data-aos="fade-down"
+          data-aos-duration="1500"
+          className="rotate"
+        >
           <Image src={BannerImg} alt="banner" />
         </Box>
       </Container>
@@ -78,6 +108,7 @@ const styles = {
       mx: 'auto',
       textAlign: 'center',
       mb: ['40px', null, null, null, null, 7],
+      fontSize: 50,
     },
     imageBox: {
       justifyContent: 'center',

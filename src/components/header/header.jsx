@@ -4,14 +4,14 @@ import { keyframes } from '@emotion/core';
 import { Link } from 'react-scroll';
 import MobileDrawer from './mobile-drawer';
 import menuItems from './header.data';
-
+import Logo from 'components/logo';
+import { FaXTwitter } from 'react-icons/fa6';
+import { FaTelegramPlane } from 'react-icons/fa';
 export default function Header({ className }) {
   return (
     <header sx={styles.header} className={className} id="header">
       <Container sx={styles.container}>
-        <Heading as="h4" sx={styles.logo}>
-          Hassan Aftab
-        </Heading>
+        <Logo />
         <Flex as="nav" sx={styles.nav}>
           {menuItems.map((menuItem, i) => (
             <Link
@@ -27,13 +27,18 @@ export default function Header({ className }) {
             </Link>
           ))}
         </Flex>
-        <Button
-          className="donate__btn"
-          variant="secondary"
-          aria-label="Get Started"
-        >
-          <Link to="pricing">Get a Web!</Link>
-        </Button>
+        <div style={styles.socials}>
+          <a href="https://twitter.com">
+            <FaXTwitter
+              style={{
+                color: '#DC1FFF',
+              }}
+            />
+          </a>
+          <a href="https://telegram.com">
+            <FaTelegramPlane style={{ color: '#DC1FFF' }} />
+          </a>
+        </div>
         <MobileDrawer />
       </Container>
     </header>
@@ -93,7 +98,7 @@ const styles = {
       display: 'block',
     },
     a: {
-      fontSize: 2,
+      fontSize: 4,
       fontWeight: 'body',
       px: 5,
       cursor: 'pointer',
@@ -101,6 +106,8 @@ const styles = {
       transition: 'all 0.15s',
       '&:hover': {
         color: 'primary',
+        fontWeight: '900',
+        fontSize: 6,
       },
       '&.active': {
         color: 'primary',
@@ -111,5 +118,12 @@ const styles = {
     fontSize: 8,
     fontWeight: 'bold',
     cursor: 'pointer',
+  },
+  socials: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: 25,
+    gap: '22px',
   },
 };

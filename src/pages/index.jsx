@@ -15,14 +15,14 @@ export default function IndexPage() {
   return (
     <ThemeProvider theme={theme}>
       <Layout>
-        <SEO title="Hassan Aftab" />
+        <SEO title="SolanaKYC - The Trusted KYC Partner for Solana Projects" />
         <Banner />
         <KeyFeature />
-        <ServiceSection />
+        {/* <ServiceSection />
         <CoreFeature />
         <WorkFlow />
         <Package />
-        <TeamSection />
+        <TeamSection /> */}
       </Layout>
     </ThemeProvider>
   );

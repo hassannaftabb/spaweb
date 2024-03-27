@@ -28,7 +28,7 @@ const data = {
 
 export default function ServiceSection() {
   return (
-    <section sx={{ variant: 'styles.services' }}>
+    <section sx={{ variant: 'styles.services' }} style={styles.services}>
       <Container sx={styles.containerBox}>
         <Box sx={styles.thumbnail}>
           <Image src={ServiceThumb} />
@@ -190,5 +190,10 @@ const styles = {
       top: 0,
       left: 0,
     },
+  },
+  services: {
+    background: 'black',
+    zIndex: 999,
+    position: 'relative',
   },
 };

@@ -1,26 +1,23 @@
 export default {
-  // example colors with dark mode
   colors: {
-    text: 'white', // body color and primary color
-    text_secondary: '#02073E', // secondary body color
-    heading: 'white', // primary heading color
-    heading_secondary: 'white', // heading color
-    background: '#000', // body background color
-    background_secondary: '#F9FBFD', // secondary background color
-    border_color: '#E5ECF4', // border color
-    yellow: '#FFA740', // border color
-    primary: '#0cf', // primary button and link color
-    secondary: '#09c', // secondary color - can be used for hover states
-    muted: '#111', // muted color
-    accent: '#609', // a contrast color for emphasizing UI
-
-    // highlight	a background color for highlighting text
+    text: 'white',
+    text_secondary: '#02073E',
+    heading: 'white',
+    heading_secondary: 'white',
+    background: '#000',
+    background_secondary: '#00FFA3',
+    border_color: '#00FFA3',
+    yellow: '#FFA740',
+    primary: '#03E1FF',
+    secondary: '#09c',
+    muted: '#111',
+    accent: '#609',
     modes: {
       dark: {
         text: '#fff',
         background: '#000',
-        primary: '#0cf',
-        secondary: '#09c',
+        primary: '#03E1FF',
+        secondary: '#00FFA3',
         muted: '#111',
       },
     },
@@ -54,7 +51,6 @@ export default {
     heading: '-0.5px',
   },
   space: [0, 5, 10, 15, 20, 25, 30, 50, 80, 100, 120, 150],
-  // variants can use custom, user-defined names
   layout: {
     container: {
       maxWidth: [
@@ -86,7 +82,7 @@ export default {
   section: {
     keyFeature: {
       pt: [8, null, 9, null, null, 10],
-      pb: ['90px', null, 9, null, null, 10, null, '165px'],
+      pb: ['90px', '90px', '90px', '90px', '90px', 10, '90px', '165px'],
     },
     feature: {
       pb: [8, null, 9, null, null, 10, null, '170px'],
@@ -105,6 +101,7 @@ export default {
     },
     services: {
       pb: ['90px', null, 9, null, null, 10, null, '150px'],
+      background: 'black',
     },
     pricing: {
       pt: [8, null, 9, null, null, 10, null, '180px'],
@@ -120,7 +117,7 @@ export default {
     marginBottom: ['50px', null, '60px', null, null, '65px', null, '80px'],
     mx: 'auto',
     title: {
-      fontSize: ['24px', null, '28px', null, null, '32px', null, '36px'],
+      fontSize: ['32px', null, '32px', null, null, '32px', null, '36px'],
       color: 'heading',
       lineHeight: [1.3, null, null, 1.25],
       textAlign: 'center',
@@ -173,7 +170,6 @@ export default {
       color: 'heading',
     },
     title: {
-      // extends the text.heading styles
       variant: 'text.heading',
       fontWeight: 'bold',
       fontSize: [3, null, 4],
@@ -238,12 +234,10 @@ export default {
       borderRadius: 99999,
     },
   },
-  // variants for buttons
   buttons: {
     menu: {
       display: [null, null, 'none'],
-    }, // default variant for MenuButton
-    // you can reference other values defined in the theme
+    },
     defaultBtn: {
       borderRadius: '45px',
       fontSize: ['14px', null, null, 2],
@@ -355,13 +349,11 @@ export default {
   },
 
   styles: {
-    // To add base, top-level styles to the <body> element, use theme.styles.root.
     root: {
       fontFamily: 'body',
       lineHeight: 'body',
       fontWeight: 'body',
       fontSmoothing: 'antialiased',
-      // Modal Global Style
       '.modal-video-close-btn': {
         cursor: 'pointer',
       },
@@ -370,13 +362,11 @@ export default {
         width: 'auto',
       },
     },
-    // Divider styles
     hr: {
       border: 0,
       borderBottom: '1px solid',
       borderColor: '#D9E0E7',
     },
-    // also you can use other HTML elements style here
     ul: {
       listStyle: 'none',
     },

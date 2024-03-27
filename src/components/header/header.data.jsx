@@ -1,18 +1,18 @@
 export default [
   {
     path: 'home',
-    label: 'Home',
+    label: 'Why?',
   },
   {
     path: 'feature',
-    label: 'Features',
+    label: 'How?',
   },
   {
     path: 'pricing',
-    label: 'Deals',
+    label: 'Pricing?',
   },
   {
     path: 'team-section',
-    label: 'About Developer',
+    label: 'Apply',
   },
 ];

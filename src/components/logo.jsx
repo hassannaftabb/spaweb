@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx, Image } from 'theme-ui';
 import { Link } from 'components/link';
-
-export default function Logo({}) {
+import LogoImage from 'assets/logomain.webp';
+export default function Logo({ src }) {
   return (
     <Link
       path="/"
@@ -13,9 +13,8 @@ export default function Logo({}) {
         mr: 15,
         height: 100,
       }}
-      {...rest}
     >
-      <Image src={src} alt="spa web - hassannaftabb -logo img" />
+      <Image src={LogoImage} alt="spa web - hassannaftabb -logo img" />
     </Link>
   );
 }
