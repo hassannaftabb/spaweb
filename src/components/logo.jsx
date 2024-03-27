@@ -11,10 +11,10 @@ export default function Logo({ src }) {
         display: 'flex',
         cursor: 'pointer',
         mr: 15,
-        height: 100,
+        height: 80,
       }}
     >
-      <Image src={LogoImage} alt="spa web - hassannaftabb -logo img" />
+      <Image src={LogoImage} alt="" />
     </Link>
   );
 }

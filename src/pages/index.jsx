@@ -10,6 +10,7 @@ import CoreFeature from '../sections/core-feature';
 import WorkFlow from '../sections/workflow';
 import Package from '../sections/package';
 import TeamSection from '../sections/team-section';
+import FAQS from 'sections/faq';
 
 export default function IndexPage() {
   return (
@@ -22,6 +23,7 @@ export default function IndexPage() {
         <CoreFeature />
         <WorkFlow />
         <Package />
+        <FAQS />
         {/* <TeamSection /> */}
       </Layout>
     </ThemeProvider>

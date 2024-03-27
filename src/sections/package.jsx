@@ -16,32 +16,10 @@ const packages = {
       description: 'KYC one or two team members (owner + 1)',
       buttonText: '1.5 SOLANA',
       priceWithUnit: '1.5 SOLANA',
-      points: [
-        {
-          id: 1,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Responsive',
-          isAvailable: true,
-        },
-        {
-          id: 2,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Fast SPA',
-          isAvailable: true,
-        },
-        {
-          id: 3,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Custom User Interface',
-          isAvailable: true,
-        },
-        {
-          id: 4,
-          icon: <IoIosCloseCircle />,
-          text: 'eCommerce OR Admin CMS functionality ',
-          isAvailable: true,
-        },
-      ],
+      points: [],
+      deliveryTime: '1 week',
+      details:
+        'Our Normal Plan offers thorough identity verification delivered within a week, ensuring comprehensive due diligence for your project.',
     },
     {
       id: 2,
@@ -50,38 +28,10 @@ const packages = {
       priceWithUnit: '3 SOLANA',
       buttonText: 'Get a Business King Web!',
       anotherOption: 'Or Contact for Custom Offer!',
-      points: [
-        {
-          id: 1,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Responsive & Scalable',
-          isAvailable: true,
-        },
-        {
-          id: 2,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Multiple Pages',
-          isAvailable: true,
-        },
-        {
-          id: 3,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Custom User Interface',
-          isAvailable: true,
-        },
-        {
-          id: 4,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Admin CMS',
-          isAvailable: true,
-        },
-        {
-          id: 4,
-          icon: <IoIosCloseCircle />,
-          text: 'eCommerce Functionality',
-          isAvailable: true,
-        },
-      ],
+      points: [],
+      deliveryTime: '48 hours',
+      details:
+        'Need verification in a hurry? Opt for our Fast Plan, guaranteeing expedited processing within 48 hours without compromising on the quality of our verification process.',
     },
     {
       id: 3,
@@ -92,32 +42,10 @@ const packages = {
       priceWithUnit: '5 SOLANA',
       buttonText: 'Get a Professional Web!',
       anotherOption: 'Or Contact with me for cutsom offers!',
-      points: [
-        {
-          id: 1,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Responsive, Scalable & Custom User Interface',
-          isAvailable: true,
-        },
-        {
-          id: 2,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Multiple Section(Blog & Shop, etc)',
-          isAvailable: true,
-        },
-        {
-          id: 3,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'Products Upload with Fully feature rich Admin CMS',
-          isAvailable: true,
-        },
-        {
-          id: 4,
-          icon: <IoIosCheckmarkCircle />,
-          text: 'eCommerce functionality ',
-          isAvailable: true,
-        },
-      ],
+      points: [],
+      deliveryTime: '6 hours',
+      details:
+        'For urgent verification needs, our Priority Plan delivers results within just 6 hours, providing peace of mind and allowing you to proceed with your project without delay.',
     },
   ],
 };
@@ -150,7 +78,7 @@ export default function Package() {
   const sliderParams = {
     additionalTransfrom: 0,
     arrows: false,
-    autoPlaySpeed: 1000,
+    autoPlaySpeed: 3000,
     centerMode: false,
     className: '',
     slidesToSlide: 1,
@@ -168,6 +96,7 @@ export default function Package() {
     responsive: responsive,
     showDots: false,
     sliderClass: '',
+    pauseOnHover: true,
   };
 
   return (
@@ -199,6 +128,31 @@ export default function Package() {
               </Box>
             ))}
           </Carousel>
+          <div style={{ marginTop: 10 }}>
+            <SectionHeader
+              slogan={
+                <ul>
+                  <li>
+                    {' '}
+                    SolanaKYC stores the ID details of KYCed project owners for
+                    12 months. After this period, the data will be securely
+                    deleted.
+                  </li>
+                  <li>
+                    We prioritize the privacy of our clients and will never
+                    share data with anyone, except in cases of fraud, scam, or
+                    rug pull. In such instances, we will share data with
+                    authorities upon request.
+                  </li>
+                  <li>
+                    It's important to note that a failed project does not equate
+                    to a scam. We treat each case with discretion and integrity.
+                  </li>
+                </ul>
+              }
+              title="Important Information"
+            />
+          </div>
         </Box>
       </Container>
     </section>

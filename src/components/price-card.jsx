@@ -11,6 +11,8 @@ export default function PriceCard({
     buttonText = 'Start Free Trial',
     anotherOption,
     points,
+    deliveryTime,
+    details,
   },
 }) {
   return (
@@ -28,7 +30,12 @@ export default function PriceCard({
             {description}
           </Text>
         </Box>
-        <List items={points} childStyle={styles.listItem} />
+        {/* <List items={points} childStyle={styles.listItem} /> */}
+        <div style={styles.deliveryTime}>
+          <span style={styles.deliveryTimeTitle}>Delivery Time:</span>
+          <span style={styles.deliveryTimeValue}>{deliveryTime}</span>
+        </div>
+        <p>{details}</p>
         <Text className="package__price" sx={styles.price}>
           {priceWithUnit}
         </Text>
@@ -143,5 +150,12 @@ const styles = {
       fontSize: ['14px', 1],
       p: '20px 0 0',
     },
+  },
+  deliveryTimeTitle: {
+    fontWeight: 'bold',
+  },
+  deliveryTimeValue: {
+    color: 'white',
+    marginLeft: 5,
   },
 };

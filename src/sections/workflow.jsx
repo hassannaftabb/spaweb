@@ -47,7 +47,7 @@ export default function WorkFlow() {
               key={item.id}
               data-aos="fade-right"
               data-aos-duration="2000"
-              data-aos-delay={`${i + 5}00`}
+              data-aos-delay={`${i + 2}00`}
             >
               <Box sx={styles.iconBox}>{`0${item.id}`}</Box>
               <Box sx={styles.wrapper}>
