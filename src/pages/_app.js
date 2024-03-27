@@ -9,7 +9,7 @@ import './styles.css';
 
 export default function CustomApp({ Component, pageProps }) {
   useEffect(() => {
-    AOS.init({ once: true });
+    AOS.init({ once: false });
   }, []);
   return <Component {...pageProps} />;
 }
